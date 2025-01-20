@@ -2,76 +2,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>domingdark - about.me</title>
+    <title>domingdark</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        .neon-button {
-            border: 2px solid #00ffff;
-            color: #00ffff;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: 0.3s;
-            margin-bottom: 10px;
-        }
-
-        .neon-button:hover {
-            background-color: rgba(0, 255, 255, 0.1);
-        }
-
-        .side-panel {
-            position: fixed;
-            top: 0;
-            right: -250px;
-            height: 100vh;
-            width: 250px;
-            background-color: #1a1a1a;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 0;
-            transition: right 0.3s ease;
-            z-index: 1000;
-        }
-
-        .side-panel.open {
-            right: 0;
-        }
-
-        footer a {
-            color: #6b7280;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #00ffff;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #00ffff;
-        }
-    </style>
+    <link rel="icon" href="me.jpg" type="image/jpg">
 </head>
 <body class="bg-gray-900 text-white font-sans">
-    <header class="flex justify-between items-center p-4 bg-gray-800">
-        <div class="text-2xl font-bold">About Me</div>
-        <button id="menu-toggle" class="text-2xl focus:outline-none">
-            <i class="fas fa-bars"></i>
-        </button>
-    </header>
 
     <main class="flex flex-col items-center justify-center min-h-screen text-center">
-        <img src="me.jpg" alt="Profile Picture" class="profile-img mb-4">
+        <!-- Imagen de perfil -->
+        <img src="your-image-url.jpg" alt="Profile" class="rounded-full w-32 h-32 mb-4">
         <p class="text-blue-400 mb-2">Discord Bot Developer</p>
-        <h1 class="text-6xl font-bold mb-4">@domingdark</h1>
-        <p class="text-gray-400 mb-8">> Hola! Soy conocido como domingdark, pero realmente me llamo Javier. Tengo 17 años y programo desde hace 6 años.
-        </p>
+        <h1 class="text-6xl font-bold mb-4">domingdark</h1>
+        <p class="text-gray-400 mb-8">Hola! Soy conocido como domingdark, pero realmente me llamo Javier. Tengo 17 años y programo desde hace 6 años.</p>
 
         <!-- Sección de Lenguajes -->
         <div class="mb-12">
@@ -89,44 +32,21 @@
         </div>
     </main>
 
-
     <footer class="flex justify-center space-x-4 p-4">
-        <a href="https://www.youtube.com/@domingdark" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-youtube text-gray-500 text-2xl"></i>
-        </a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/domingdark" target="_blank">
             <i class="fab fa-github text-gray-500 text-2xl"></i>
         </a>
-        <a href="https://www.instagram.com/@domingdark" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/@domingdark" target="_blank">
             <i class="fab fa-instagram text-gray-500 text-2xl"></i>
         </a>
-        <!-- Enlace para X -->
-        <a href="https://x.com/domingdark" target="_blank" rel="noopener noreferrer">
-            <img src="yO.jpg" alt="X Logo" class="w-6 h-6 hover:scale-110 transition-transform">
+        <a href="https://youtube.com/@domingdark" target="_blank">
+            <i class="fab fa-youtube text-gray-500 text-2xl"></i>
+        </a>
+        <!-- Redirección de X (Twitter) -->
+        <a href="https://x.com/@domingdark" target="_blank">
+            <img src="yO.jpg" alt="X Logo" class="w-8 h-8 rounded-full" />
         </a>
     </footer>
 
-
-    <div id="side-panel" class="side-panel">
-        <button class="neon-button">Option 1</button>
-        <button class="neon-button">Option 2</button>
-        <button class="neon-button">Option 3</button>
-    </div>
-
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidePanel = document.getElementById('side-panel');
-
-        menuToggle.addEventListener('click', () => {
-            sidePanel.classList.toggle('open');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!sidePanel.contains(e.target) && !menuToggle.contains(e.target)) {
-                sidePanel.classList.remove('open');
-            }
-        });
-    </script>
 </body>
-                      </html>
-                      
+</html>
